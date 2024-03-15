@@ -1,6 +1,12 @@
 version: "3.8"
 services:
-  #backend:
+  backend:
+    build: ./backend
+    ports:
+      - '80:80'
+    depends_on: 
+      - mongodb
+      
   #frontend:
   mongodb: 
     image: "mongo"
